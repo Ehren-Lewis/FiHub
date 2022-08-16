@@ -14,15 +14,16 @@ There are 2 main sections
 Then, there are 3 main categories
 
 Crypto Currency:
-    CSS style
-    DOM manipulation with JS
-    JS API call
+    CSS style: Hannah
+    DOM manipulation with JS: Spencer
+    JS API call: Ehren
 
 Stocks:
-    CSS style
-    DOM manipulation with JS
-    JS API call
+    CSS style: Andre
+    DOM manipulation with JS: Ehren
+    JS API call: John
 
+header hex: #800000
 The goal is that the API calls will be dynamic.
 
 There is the possibility to limit query results, or it can be a function to let the user
