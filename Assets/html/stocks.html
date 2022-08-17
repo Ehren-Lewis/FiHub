@@ -17,16 +17,30 @@
     
     <header>
 
-        <nav class="navbar navbar-expand fixed-top shadow navcolor">
-    
+        <nav class="navbar navbar-expand sticky-top shadow navcolor" style="z-index: -1 ;">
             <div class="navbar-nav nav w-100 d-flex justify-content-around navcolor">
                 <a class="nav-item nav-link active" href="#">Home</a>
                 <a class="nav-item nav-link" href="#">Stocks</a>
                 <a class="nav-item nav-link" href="#">Cypto</a>
-    
             </div>
         </nav>
-    </header>
+        </header>
+        
+        
+        <main class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <form id="stockForm" class="border p-5 text-align">
+                    <label for="symbolInput">Symbol: </label>
+                    <input type="text" id="symbolInput">
+                    <br>
+                    <button id="addMore" class="mx-auto">Add</button>
+                    <button id="submit" class="mx-auto">Submit</button>
+                </form>
+            </div>
+        
+        </div>
+        </main>
 
 
 
