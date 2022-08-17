@@ -28,7 +28,6 @@ $("#submit").on('click', (e) => {
     for (let i = 0; i < allSymbols.length; i++) {
         symbolList.push(allSymbols[i].textContent.toUpperCase());
     }
-    console.log(symbolList);
 })
 
 const queryHolder = $(".queryHolder");
@@ -36,7 +35,6 @@ const queryHolder = $(".queryHolder");
 const pushQuery = (value) => {
     if (!value) {
         return;
-
     }
     const newVal = $("<p></p>");
     newVal.text(value);
