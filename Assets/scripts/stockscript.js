@@ -11,8 +11,6 @@ var companyName = "";
 var requestedQuote = "AAPL"
 
 
-
-
 $.ajax({
     url: url + requestedQuote + "?apikey=" + apikey,
     method: "GET"
