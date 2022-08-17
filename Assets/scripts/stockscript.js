@@ -7,8 +7,8 @@ const apikey = "031790bc33587193255896a4a8034319"
 var highOfDay = document.querySelector('#high');
 var lowOfDay = document.querySelector('#low');
 var current = document.querySelector('#current');
-
-requestedQuote = "WTNW";
+var companyName = "";
+var requestedQuote = "AAPL"
 
 
 
@@ -23,6 +23,7 @@ $.ajax({
     high.textContent = "High of Day:  " + data[0].dayHigh;
     low.textContent = "Low of Day:  " + data[0].dayLow;
     current.textContent = "Current Price:  " + data[0].price;
+    companyName.text = "Company Name:  " + data[0].name;
   });
 
 // high of day 
@@ -49,12 +50,12 @@ $("#addMore").on('click', (e) => {
 });
 $("#submit").on('click', (e) => {
     e.preventDefault();
-    const allSymbols = document.querySelectorAll("#symbolInput");
+    const allSymbols = document.querySelectorAll("#symbolInput");    
     for (let i = 0; i < allSymbols.length; i++) {
-        if (allSymbols[i].value != "") {
+      if (allSymbols[i].value != "") {
             symbolList.push(allSymbols[i].value.toUpperCase());
-            alert(#symbolInput);
         }
     }
 })
+
 
