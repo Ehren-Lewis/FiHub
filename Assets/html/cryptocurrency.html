@@ -95,9 +95,18 @@
     <!-- Table of crypto information -->
     <section>
       <h2>Cryptocurrency Information</h2>
-      <table id="table">
-        <thead></thead>
-        <tbody></tbody>
+      <table class="table" id="table">
+        <thead>
+          <th scope="Name">Name</th>
+          <th scope="Price (USD)">Price (USD)</th>
+          <th scope="Chart">Chart</th>
+          <th scope="Day Change %">Day Change %</th>
+          <th scope="Supply">Supply</th>
+          <th scope="Trade">Trade</th>
+        </thead>
+        <tbody id="coinTable">
+          <!-- create tr and td elements -->
+        </tbody>
       </table>
     </section>
 
@@ -105,21 +114,32 @@
     <section class="compare-currency">
       <h3>Compare crypto prices with other types of currency.</h3>
       <!-- Dropdown for crypto-->
-      <select class="form-select">
+      <select class="form-select" id="selectCoin">
         <option selected>Select Cryptocurrency Type</option>
-        <option value="1">Crypto 1</option>
-        <option value="2">Crypto 2</option>
-        <option value="3">Crypto 3</option>
+        <option value="BTC">Bitcoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="YFI">Yearn.Finance</option>
+        <option value="BUSD">BUSD</option>
+        <option value="DOGE">Dogecoin</option>
+        <option value="SHIB">Shiba Inu</option>
+        <option value="SOL">Solana</option>
+        <option value="USDt">Tether</option>
+        <option value="BNB">Binance Coin</option>
+        <option value="XRP">XRP</option>
       </select>
       <!-- Dropdown for money currency -->
-      <select class="form-select">
+      <select class="form-select" id="selectCurr">
         <option selected>Select Currency Type</option>
-        <option value="1">Currency 1</option>
-        <option value="2">Currency 2</option>
-        <option value="3">Currency 3</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="GBP">GBP</option>
       </select>
-      <!-- Results of comparison (added dynamically) -->
-      <p></p>
+      <!-- Results of comparison -->
+      <p>
+        Coin selected: <span id="changedCoin"></span> Value in
+        <span id="changedValue"></span>
+      </p>
     </section>
 
     <!-- Currency news sections -->
