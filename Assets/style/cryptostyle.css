@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --tan: #dbcdc6;
+  --pink: #9d6381;
+  --purple: #615fd6;
+  --green: #559f84;
+  --blue: #0f638c;
+  --red: #800000;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--red);
+}
+
+.nav-bar img {
+  justify-self: flex-start;
+  align-self: center;
+  background-color: white;
+  width: 10%;
+  height: auto;
+}
+
+.nav-bar h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  padding: 5px 0 15px 0;
+}
+
+.nav li {
+  align-self: center;
+  padding: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ABOUT SECTION */
+.about {
+  margin: 10px 25px 10px 25px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 10px 0 20px 0;
+  border-bottom: 4px solid var(--red);
+  margin:0 0 20px 0;
+}
+
+.about p {
+  line-height: 1.4rem;
+}
+
+.p1 {
+    padding: 0 0 10px 0;
+}
+
+.p2 {
+    padding: 0 0 10px 0;
+}
+
+.about-div li {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 40px;
+  margin: 0 0 8px 0;
+}
+
+.about-div p {
+    padding: 0 0 8px 0;
+}
+
+.p3 {
+    padding: 2px 0 0 0;
+}
