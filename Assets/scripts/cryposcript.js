@@ -109,7 +109,7 @@ let tests = {
   }
 
 
-  const query = `${Object.keys(tests)[0]}=${tests.fsym}&${Object.keys(tests)[1]}=${tests.tsyms}&api_key=${key}`;
+  const query = `${Object.keys(tests)[0]}=${tests.fsym}&${Object.keys(tests)[1]}=CAD&api_key=${key}`;
 
   $.ajax({
     url: baseUrl + query,
@@ -151,6 +151,22 @@ $( () => {
     source: availableTags});
 })
 
-  const base = "https://min-api.cryptocompare.com/data/all/coinlist";
+  // const base = "https://min-api.cryptocompare.com/data/all/coinlist";
 
+  ( () => {
+    $("#coinSelect").checkboxradio();
+  });
 
+const currencyList = [
+  "USD",
+  "EUR",
+  "JPY",
+  "CAD"
+]
+
+// checkox 1-4
+
+// <fieldset> 
+// for (let i = 0; i < currencyList.length; i++) {
+  
+// }
