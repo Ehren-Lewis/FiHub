@@ -23,12 +23,12 @@ const addAnotherRow = () => {
 
 $("#submit").on('click', (e) => {
     e.preventDefault();
-    const allSymbols = document.querySelectorAll("#symbolInput");
+    const allSymbols = document.querySelectorAll(".pQuery");
+
     for (let i = 0; i < allSymbols.length; i++) {
-        if (allSymbols[i].value != "") {
-            symbolList.push(allSymbols[i].value.toUpperCase());
-        }
+        symbolList.push(allSymbols[i].textContent.toUpperCase());
     }
+    console.log(symbolList);
 })
 
 const queryHolder = $(".queryHolder");
@@ -36,6 +36,7 @@ const queryHolder = $(".queryHolder");
 const pushQuery = (value) => {
     if (!value) {
         return;
+
     }
     const newVal = $("<p></p>");
     newVal.text(value);
