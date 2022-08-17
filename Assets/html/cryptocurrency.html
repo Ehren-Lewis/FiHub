@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../style/reset.css" />
     <link href="../style/cryptostyle.css" rel="stylesheet" />
     <!-- FontAwesome CDN -->
     <link
@@ -18,23 +19,32 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- JQuery UI stylesheet  -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
 
     <title>FiHub Crypto</title>
   </head>
 
   <body>
-  
     <!-- Nav Bar -->
-    <nav>
-      <div><!--put logo here--></div>
+    <nav class="nav-bar">
+      <figure>
+        <img
+          id="nav-bar-logo"
+          src="../Images/FiHubLogoWords.png"
+          alt="FiHub logo"
+        />
+      </figure>
       <h1>Cryptocurrency</h1>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+      <ul class="nav">
+        <li>
+          <!-- Add link to landing page (index.html) -->
+          <a class="nav-link" href="">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Stocks</a>
+        <li>
+          <a href="../html/stocks.html">Stocks</a>
         </li>
       </ul>
     </nav>
@@ -42,7 +52,28 @@
     <!-- About Crypto Section -->
     <section>
       <h2>About Cryptocurrency</h2>
-      <p></p>
+      <p>
+        Cryptocurrency, also known as crypto, is a type of currency that comes
+        exclusively in digital form. Unlike phyiscal currenies, there is no
+        central regulation or authority to maintain or uphold them. Crypto's
+        purpose is to be a medium of exchange through a computer network, as
+        they are not typically an accepted form of payment in most transactions. Other's use this as
+        an opportunity for investment.<br />
+        Crypto is a relatively new concept and form of currency. The idea of
+        digital currency was made in 1983 by David Chaum, and in 1995 he
+        officially created the first digital currency. Since then there have
+        been thousands of cryptocurrencies created and will only continue to
+        grow as popularity increases. Currently, the most popular, and well
+        known, crypto is Bitcoin.<br />
+        Besides for investment opportunities, there are many reasons why crypto is used. Some of the most popular reasons include:
+        <ul>
+            <li>The digital form allows anyone from anywhere to send or recieve payments with crypto.</li>
+            <li>Inflations is a thing of the past with crypto, as most have a limited supply.</li> 
+            <li>The cost for transactions is lower compared with physical curriencies.</li>
+        </ul>
+        <br>
+        Even though there are many benefits with crypto, it is not free of risks. The main risk involved with crypto is the possibility of the value decreasing, due unforseen changes in the market. However, this risk exists with other types of investment opporunities.
+      </p>
     </section>
 
     <!-- Table of crypto information -->
@@ -56,9 +87,7 @@
 
     <!-- Currency Comparison section -->
     <section class="compare-currency">
-      <!-- !!!!NOTE: decide if we want to specify a few options in html, or dynamically add an unlimited/larger amount in js based on API data-->
-
-      <h3>Compare crypto prices with other types of currency</h3>
+      <h3>Compare crypto prices with other types of currency.</h3>
       <!-- Dropdown for crypto-->
       <select class="form-select">
         <option selected>Select Cryptocurrency Type</option>
@@ -73,22 +102,22 @@
         <option value="2">Currency 2</option>
         <option value="3">Currency 3</option>
       </select>
-      <!-- Results of comparison -->
+      <!-- Results of comparison (added dynamically) -->
       <p></p>
     </section>
 
     <!-- Currency news sections -->
     <section>
-      <h3>Check out the latest news on crypto at</h3>
-      <a href="">
+      <h3>Check out the latest news on crypto!</h3>
+      <a href="https://cryptonews.com/">
         <!-- cryptonews logo & link to news-->
-        <img src="" alt=""
+        <img src="../Images/crypto-news-logo.jpeg" alt="cryptonews logo"
       /></a>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <ul class="nav justify-content-start">
+    <footer class="nav-bar">
+      <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
         </li>
@@ -99,10 +128,11 @@
           <a class="nav-link" href="#">Crypto</a>
         </li>
       </ul>
-      <!-- Put logo here w/ link to home -->
-      <a href=""> <img src="" alt="" /> </a>
+      <!-- Add link to landing page -->
+      <a href="">
+        <img src="../Images/FoHubLogoSolo.png" alt="FiHub logo" />
+      </a>
     </footer>
-
 
     <!-- Script to pull in jQuery, Popper & Bootstrap. Last is the script file for the crypto index HTML -->
     <script
