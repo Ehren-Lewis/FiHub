@@ -53,8 +53,8 @@ $("#submit").on('click', (e) => {
     for (let i = 0; i < allSymbols.length; i++) {
         if (allSymbols[i].value != "") {
             symbolList.push(allSymbols[i].value.toUpperCase());
+            alert(#symbolInput);
         }
     }
 })
-
 
