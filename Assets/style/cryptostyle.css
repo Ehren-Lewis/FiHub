@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --tan: #dbcdc6;
+  --pink: #9d6381;
+  --purple: #615fd6;
+  --green: #559f84;
+  --blue: #0f638c;
+  --red: #800000;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--red);
+}
+
+.nav-bar img {
+  justify-self: flex-start;
+  align-self: center;
+  background-color: white;
+  width: 10%;
+  height: auto;
+}
+
+.nav-bar h1 {
+  font-size: 3rem;
+  color: white;
+  padding: 5px 0 15px 0;
+}
+
+.nav li {
+  align-self: center;
+  padding: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
