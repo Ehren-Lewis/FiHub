@@ -1,0 +1,14 @@
+.pQuery {
+    /* display: inline-block; */
+    border: 1px solid black;
+    /* padding-right: 2px; */
+
+
+}
+
+.queryHolder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+    min-height: 5px;
+} 

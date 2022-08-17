@@ -30,16 +30,18 @@
         <main class="container my-3">
         <div class="row">
             <div class="col-12">
-                <form id="stockForm" class="border p-5 text-align">
+                <form id="stockForm" class="border p-5 text-align w-inheret">
+                    <div class="form-group">
                     <label for="symbolInput">Symbol: </label>
-                    <input type="text" id="symbolInput">
+                    <input type="text" id="symbolInput" maxlength="6">
                     <br>
+                    </div>
                     <button id="addMore" class="mx-auto">Add</button>
                     <button id="submit" class="mx-auto">Submit</button>
                 </form>
             </div>
-        
         </div>
+        <div class="row queryHolder"></div>
         </main>
 
 
