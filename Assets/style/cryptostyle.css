@@ -46,6 +46,11 @@
   color: white;
 }
 
+.navbar-ul a:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 /* ABOUT SECTION */
 .about {
   padding: 0 0 40px 0;
@@ -101,11 +106,12 @@
   color: var(--blue);
   padding: 50px 0 20px 0;
   border-bottom: 4px solid var(--red);
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
 }
 
 .table {
   border: 2px solid var(--red);
+  width: 100%;
 }
 
 .table thead {
@@ -124,14 +130,14 @@
   margin: 0 25px 40px 25px;
   height: 100%;
   padding-top: 60px;
-  border-top: 2px solid var(--tan);
+  border-top: 4px solid var(--red);
 }
 
 /* CURRENCY COMPARISON SECTION */
 .compare-currency {
   display: flex;
   flex-wrap: wrap;
-  max-width: 48%;
+  width: 48%;
   margin-right: 10px;
 }
 
@@ -166,6 +172,12 @@
 .form-select {
   margin: 10px 0 20px 0;
 }
+
+.form-select:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 .compare-result {
   font-size: 1.2rem;
   padding: 20px 0 30px 0;
@@ -179,7 +191,7 @@
 
 /* NEWS SECTION */
 .news {
-  max-width: 48%;
+  width: 48%;
   margin-left: 10px;
 }
 
@@ -228,6 +240,11 @@
   padding: 15px 60px 15px 60px;
 }
 
+.footer-nav li :hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 .footer-nav a {
   text-decoration: none;
   color: white;
@@ -241,4 +258,42 @@
   width: 20%;
   height: auto;
   margin: 5px 0 5px 0;
+}
+
+.footer-img :hover {
+  cursor: pointer;
+}
+
+/* Mobile phone */
+@media only screen and (max-width: 700px) {
+  .nav-bar h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .compare-currency {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .news {
+    width: 100%;
+    margin: 15px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-bar h1 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-img {
+    position: relative;
+    left: 40%;
+  }
+
+  .footer-nav li {
+    width: 100%;
+    text-align: center;
+  }
 }
