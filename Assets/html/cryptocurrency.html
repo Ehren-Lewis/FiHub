@@ -49,7 +49,7 @@
 
     <!-- About Crypto Section -->
     <section class="about">
-      <h2>About Cryptocurrency</h2>
+      <h2>About Cryptocurrency </h2>
       <p class="p1">
         Cryptocurrency, also known as crypto, is a type of currency that comes
         exclusively in digital form. Unlike phyiscal currenies, there is no
@@ -91,66 +91,77 @@
         exists with other types of investment opporunities too.
       </p>
     </section>
-
     <!-- Table of crypto information -->
-    <section>
+    <section class="table-section">
       <h2>Cryptocurrency Information</h2>
       <table class="table" id="table">
         <thead>
           <th scope="Name">Name</th>
           <th scope="Price (USD)">Price (USD)</th>
-          <th scope="Chart">Chart</th>
+          <!-- <th scope="Chart">Chart</th> -->
+          <!-- <th scope="Supply">Supply</th> -->
+          <th scope="Supply">High of Day</th>
+          <th scope="Supply">Low of Day</th>
           <th scope="Day Change %">Day Change %</th>
-          <th scope="Supply">Supply</th>
-          <th scope="Trade">Trade</th>
+          <!-- <th scope="Supply">Supply</th>
+          <th scope="Trade">Trade</th> -->
         </thead>
         <tbody id="coinTable">
           <!-- create tr and td elements -->
         </tbody>
       </table>
     </section>
+    <div class="split-page">
+      <!-- Currency Comparison section -->
+      <section class="compare-currency">
+        <h3>Crypto Price Comparison</h3>
+        <div class="compare-main-content">
+          <p class="compare-description">
+            Compare cryptocurrency prices in various currencies.
+          </p>
+          <!-- Dropdown for crypto-->
+          <select class="form-select" id="selectCoin">
+            <option selected>Select Cryptocurrency Type</option>
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="YFI">Yearn.Finance</option>
+            <option value="BUSD">BUSD</option>
+            <option value="DOGE">Dogecoin</option>
+            <option value="SHIB">Shiba Inu</option>
+            <option value="SOL">Solana</option>
+            <option value="USDt">Tether</option>
+            <option value="BNB">Binance Coin</option>
+            <option value="XRP">XRP</option>
+          </select>
+          <!-- Dropdown for money currency -->
+          <select class="form-select" id="selectCurr">
+            <option selected>Select Currency Type</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <!-- Results of comparison -->
+          <p class="compare-result">
+            Coin selected: <span id="changedCoin"></span> Value in
+            <span id="changedValue"></span>
+          </p>
+        </div>
+      </section>
 
-    <!-- Currency Comparison section -->
-    <section class="compare-currency">
-      <h3>Compare crypto prices with other types of currency.</h3>
-      <!-- Dropdown for crypto-->
-      <select class="form-select" id="selectCoin">
-        <option selected>Select Cryptocurrency Type</option>
-        <option value="BTC">Bitcoin</option>
-        <option value="ETH">Ethereum</option>
-        <option value="YFI">Yearn.Finance</option>
-        <option value="BUSD">BUSD</option>
-        <option value="DOGE">Dogecoin</option>
-        <option value="SHIB">Shiba Inu</option>
-        <option value="SOL">Solana</option>
-        <option value="USDt">Tether</option>
-        <option value="BNB">Binance Coin</option>
-        <option value="XRP">XRP</option>
-      </select>
-      <!-- Dropdown for money currency -->
-      <select class="form-select" id="selectCurr">
-        <option selected>Select Currency Type</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="JPY">JPY</option>
-        <option value="GBP">GBP</option>
-      </select>
-      <!-- Results of comparison -->
-      <p>
-        Coin selected: <span id="changedCoin"></span> Value in
-        <span id="changedValue"></span>
-      </p>
-    </section>
-
-    <!-- Currency news sections -->
-    <section>
-      <h3>Check out the latest news on crypto!</h3>
-      <a href="https://cryptonews.com/">
-        <!-- cryptonews logo & link to news-->
-        <img src="../Images/crypto-news-logo.jpeg" alt="cryptonews logo" height="60px" width="180px"
-      /></a>
-    </section>
-
+      <!-- Currency news sections -->
+      <section class="news">
+        <h3>Cryptocurrency News</h3>
+        <div class="news-div">
+          <p>Check out the latest news on crypto at cryptonews!</p>
+          <a href="https://cryptonews.com/">
+            <!-- cryptonews logo & link to news-->
+            <img src="../Images/crypto-news-logo.jpeg" alt="cryptonews logo"
+          /></a>
+        </div>
+      </section>
+    </div>
+ 
     <!-- Footer -->
     <footer class="footer">
       <ul class="nav-footer">
