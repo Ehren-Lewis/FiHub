@@ -2,74 +2,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let url = "https://financialmodelingprep.com/api/v3/quote/";
+const apikey = "031790bc33587193255896a4a8034319"
+
+var highOfDay = document.querySelector('#high');
+var lowOfDay = document.querySelector('#low');
+var currentGlobal = document.querySelector('#current');
+var upper;
+const table = document.querySelector("#infoDisplay");
+
+
+// var requestedQuote = "ABC"
+
+// $.ajax({
+//     url: url + requestedQuote + "?apikey=" + apikey,
+//     method: "GET"
+// })
+// .then(function (data) {
+//     console.log(data)
+//     companyName.text = "Company Name:  " + data[0].name;
+//     high.textContent = "High of Day:  " + data[0].dayHigh;
+//     low.textContent = "Low of Day:  " + data[0].dayLow;
+//     current.textContent = "Current Price:  " + data[0].price;
+
+//   });
 
 
 // high of day 
+// low of day 
+// current price 
 // low of day 
 // current price 
 
@@ -90,22 +51,12 @@ const addAnotherRow = () => {
 
 const key = "031790bc33587193255896a4a8034319";
 
-const beforeUrl = `https://financialmodelingprep.com/api/v3/quote/`;
-
-// const table = $("<table class='table'></table>");
-const resultRow = $("<div class='row'></div>");
+const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
 
-
-const createTableResult = () => {
-
-
-    // will be ran each fetch 
-    // name obj.name
-    // current obj.price
-    // high obj.dayHigh
-    // low obj.dayLow
-}
+// const createTableResult = () => {
+    
+// }
 
 
 
@@ -115,13 +66,36 @@ $("#submit").on('click', (e) => {
     const allSymbols = document.querySelectorAll(".pQuery");
 
     for (let i = 0; i < allSymbols.length; i++) {
-        symbolList.push(allSymbols[i].textContent.toUpperCase());
+        
         $.ajax({
             url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
             method: "GET"
         }).then ( (value) => {
+            let name = value[0].name;
+            let high = value[0].dayHigh;
+            let low = value[0].dayLow;
+            let current = value[0].price;
+
+            let template = `
+                    <tr>
+                        <td>${upper}</td>
+                        <td>${name}</td>
+                        <td>${high}</td>
+                        <td>${low}</td>
+                        <td>${current}</td>                
+                    </tr>`;
+            table.innerHTML += template;
+            
+                    // table.append(template)
+            
+            
             console.log(value);
-        
+            // requestedQuote.coName[i] = value[0].name;
+            // requestedQuote.high[i] = value[0].dayHigh;
+            // requestedQuote.low[i] = value[0].dayLow;
+            // requestedQuote.current[i] = value[0].price;
+            // console.log(requestedQuote[i].coName)
+
         }).catch( (error) => {
             console.log(error);
         });
@@ -138,17 +112,37 @@ const pushQuery = (value) => {
     newVal.text(value);
     newVal.addClass("pQuery col-2");
     queryHolder.append(newVal);
-
+    console.log(newVal.value);
 }
 
 
 $("#addMore").on('click', (e) => {
     e.preventDefault();
-    // addAnotherRow();
     const allSymbols = document.querySelector("#symbolInput");
-    pushQuery(allSymbols.value);
+    console.log(allSymbols.value);
+    upper = allSymbols.value.toUpperCase();
+    newTable();
 });
 
+function newTable() {
 
+    $.ajax({
+        url : `${beforeUrl}${upper}?apikey=${key}`,
+        method: "GET"
+    }).then ( (value) => {
+        let name = value[0].name;
+        let high = value[0].dayHigh;
+        let low = value[0].dayLow;
+        let current = value[0].price;
 
-
+        let template = `
+                <tr>
+                    <td>${upper}</td>
+                    <td>${name}</td>
+                    <td>${high}</td>
+                    <td>${low}</td>
+                    <td>${current}</td>                
+                </tr>`;
+        table.innerHTML += template;
+      
+})}

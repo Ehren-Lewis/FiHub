@@ -42,6 +42,10 @@ nav {
     padding: 10px;
   }
   
+  infoDisplay{
+      display:flex;
+      padding: 20%;
+  }
   
   footer {
     flex-shrink: 0;
@@ -60,9 +64,22 @@ nav {
 
 }
 
-/* .queryHolder {
+
+.queryHolder {
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 2px;
     min-height: 5px;
-}  */
+
+    padding: 5%;
+} 
+
+th, td{
+  border:1px solid black;
+  padding: 10px
+}
+ 
+
