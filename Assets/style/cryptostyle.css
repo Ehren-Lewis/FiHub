@@ -26,6 +26,7 @@
   background-color: white;
   width: 10%;
   height: auto;
+  margin: 5px 0 5px 0;
 }
 
 .nav-bar h1 {
@@ -56,7 +57,7 @@
   color: var(--blue);
   padding: 10px 0 20px 0;
   border-bottom: 4px solid var(--red);
-  margin:0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .about p {
@@ -64,11 +65,11 @@
 }
 
 .p1 {
-    padding: 0 0 10px 0;
+  padding: 0 0 10px 0;
 }
 
 .p2 {
-    padding: 0 0 10px 0;
+  padding: 0 0 10px 0;
 }
 
 .about-div li {
@@ -79,9 +80,74 @@
 }
 
 .about-div p {
-    padding: 0 0 8px 0;
+  padding: 0 0 8px 0;
 }
 
 .p3 {
-    padding: 2px 0 0 0;
+  padding: 2px 0 0 0;
+}
+
+/* CRYPTO TABLE SECTION */
+.table-section {
+  margin: 10px 25px 10px 25px;
+}
+
+.table {
+  border: 2px solid var(--blue);
+}
+
+.table thead {
+
+}
+
+.table tbody {
+
+}
+
+/* Splitting screen for currency comparison & news sections*/
+.split-page {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 25px 10px 25px;
+}
+
+/* CURRENCY COMPARISON SECTION */
+.compare-currency {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.compare-currency h3 {
+  font-size: 1.5rem;
+}
+
+.form-select {
+  width: 100%;
+}
+
+/* NEWS SECTION */
+.news {
+  max-width: 50%;
+}
+
+.news img {
+  max-width: 100%;
+}
+
+/* FOOTER SECTION */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--red);
+}
+
+.footer img {
+  justify-self: flex-end;
+  align-self: center;
+  background-color: white;
+  width: 10%;
+  height: auto;
+  margin: 5px 0 5px 0;
 }
