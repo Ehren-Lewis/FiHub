@@ -36,12 +36,12 @@
   padding: 5px 0 15px 0;
 }
 
-.nav li {
+.navbar-ul li {
   align-self: center;
   padding: 15px;
 }
 
-.nav a {
+.navbar-ul a {
   text-decoration: none;
   color: white;
 }
@@ -196,15 +196,26 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: var(--red);
 }
 
-.footer img {
-  justify-self: flex-end;
+.footer-nav li {
   align-self: center;
+  padding: 15px 60px 15px 60px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-img {
+  position: relative;
+  left: 200px;
+    align-self: center;
   background-color: white;
-  width: 10%;
+  width: 20%;
   height: auto;
   margin: 5px 0 5px 0;
 }
