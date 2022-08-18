@@ -53,14 +53,6 @@ const key = "031790bc33587193255896a4a8034319";
 
 const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
-
-// const createTableResult = () => {
-    
-// }
-
-
-
-
 $("#submit").on('click', (e) => {
     e.preventDefault();
     const allSymbols = document.querySelectorAll(".pQuery");
