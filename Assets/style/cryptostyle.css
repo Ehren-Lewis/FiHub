@@ -161,8 +161,35 @@
   max-width: 50%;
 }
 
+.news h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.news-div {
+  background-color: var(--tan);
+  width: 100%;
+  padding: 0 10px 0 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.news p {
+  padding: 30px 0 30px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .news img {
   max-width: 100%;
+  margin: 0 0 30px 0;
+  border-radius: 50px 50px 50px 50px;
 }
 
 /* FOOTER SECTION */
