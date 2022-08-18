@@ -97,11 +97,9 @@
 }
 
 .table thead {
-
 }
 
 .table tbody {
-
 }
 
 /* Splitting screen for currency comparison & news sections*/
@@ -120,10 +118,37 @@
 
 .compare-currency h3 {
   font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+}
+
+.compare-main-content {
+  background-color: var(--tan);
+  width: 100%;
+  padding: 0 10px 0 10px;
+}
+
+.compare-description {
+  font-size: 1.2rem;
+  padding: 20px 0 30px 0;
 }
 
 .form-select {
-  width: 100%;
+  margin: 10px 0 20px 0;
+}
+.compare-result {
+  font-size: 1.2rem;
+  padding: 5px 0 30px 0;
+}
+
+#changedCoin,
+#changedValue {
+  font-weight: bold;
 }
 
 /* NEWS SECTION */
