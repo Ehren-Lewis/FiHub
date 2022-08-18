@@ -48,6 +48,7 @@
 
 /* ABOUT SECTION */
 .about {
+  padding: 0 0 40px 0;
   margin: 10px 25px 10px 25px;
 }
 
@@ -89,17 +90,30 @@
 
 /* CRYPTO TABLE SECTION */
 .table-section {
+border-top: 2px solid var(--tan);
   margin: 10px 25px 10px 25px;
 }
 
+.table-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 50px 0 20px 0;
+  border-bottom: 4px solid var(--red);
+  margin: 0 0 20px 0;
+}
+
 .table {
-  border: 2px solid var(--blue);
+  border: 2px solid var(--red);
 }
 
 .table thead {
+  background-color: var(--red);
+  color: white;
 }
 
 .table tbody {
+  background-color: var(--tan);
 }
 
 /* Splitting screen for currency comparison & news sections*/
@@ -111,6 +125,7 @@
 
 /* CURRENCY COMPARISON SECTION */
 .compare-currency {
+  
   display: flex;
   flex-wrap: wrap;
   max-width: 50%;
@@ -213,14 +228,9 @@
 .footer-img {
   position: relative;
   left: 200px;
-    align-self: center;
+  align-self: center;
   background-color: white;
   width: 20%;
   height: auto;
   margin: 5px 0 5px 0;
-}
-
-tbody tr:nth-child(odd) {
-  background-color:#0f638c;
-  color: white;
 }
