@@ -53,20 +53,10 @@ const key = "031790bc33587193255896a4a8034319";
 
 const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
-// const table = $("<table class='table'></table>");
-const resultRow = $("<div class='row'></div>");
 
-
-
-const createTableResult = () => {
-
-
-    // will be ran each fetch 
-    // name obj.name
-    // current obj.price
-    // high obj.dayHigh
-    // low obj.dayLow
-}
+// const createTableResult = () => {
+    
+// }
 
 
 
@@ -76,7 +66,7 @@ $("#submit").on('click', (e) => {
     const allSymbols = document.querySelectorAll(".pQuery");
 
     for (let i = 0; i < allSymbols.length; i++) {
-        symbolList.push(allSymbols[i].textContent.toUpperCase());
+        
         $.ajax({
             url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
             method: "GET"
@@ -121,7 +111,7 @@ const pushQuery = (value) => {
     newVal.text(value);
     newVal.addClass("pQuery col-2");
     queryHolder.append(newVal);
-
+    console.log(newVal.value);
 }
 
 
@@ -129,5 +119,10 @@ $("#addMore").on('click', (e) => {
     e.preventDefault();
     // addAnotherRow();
     const allSymbols = document.querySelector("#symbolInput");
-    pushQuery(allSymbols.value);
+    console.log(allSymbols.value);
+    symbolList.push(allSymbols.textContent.toUpperCase());
+    
+    console.log(symbolList.value);
+    // newTable(allSymbols.value);
 });
+
