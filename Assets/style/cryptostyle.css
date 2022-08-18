@@ -125,17 +125,21 @@
   align-self: center;
   width: 100%;
   padding: 15px 0 15px 0;
+  border-radius: 20px 20px 0 0;
 }
 
 .compare-main-content {
   background-color: var(--tan);
   width: 100%;
   padding: 0 10px 0 10px;
+  border-radius: 0 0 20px 20px;
 }
 
 .compare-description {
   font-size: 1.2rem;
   padding: 20px 0 30px 0;
+  text-align: center;
+  color: var(--red);
 }
 
 .form-select {
@@ -143,7 +147,8 @@
 }
 .compare-result {
   font-size: 1.2rem;
-  padding: 5px 0 30px 0;
+  padding: 20px 0 30px 0;
+  border-top: 2px solid var(--red);
 }
 
 #changedCoin,
