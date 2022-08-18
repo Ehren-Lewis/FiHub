@@ -1,7 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  :root {
+    --tan: #dbcdc6;
+    --pink: #9d6381;
+    --purple: #615fd6;
+    --green: #559f84;
+    --blue: #0f638c;
+    --red: #800000;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--red);
+  }
+
+  .nav-bar img {
+    justify-self: flex-start;
+    align-self: center;
+    background-color: white;
+    width: 10%;
+    height: auto;
+    margin: 5px 0 5px 0;
+  }
+  
 
 
-.navcolor {
-    background-color: #800000;
-}
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
 
 
+  .grid-start {
+    grid-template-columns: repeat(1fr, 5);
+  }
