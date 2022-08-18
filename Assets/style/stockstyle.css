@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
   }
@@ -42,3 +43,19 @@
     margin-top: auto;
   }
   
+=======
+.pQuery {
+    /* display: inline-block; */
+    border: 1px solid black;
+    /* padding-right: 2px; */
+
+
+}
+
+.queryHolder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+    min-height: 5px;
+} 
+>>>>>>> d04276d6495dbf8e97937a250b3e259abb3cdce0
