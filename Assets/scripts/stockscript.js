@@ -92,6 +92,24 @@ const key = "031790bc33587193255896a4a8034319";
 
 const beforeUrl = `https://financialmodelingprep.com/api/v3/quote/`;
 
+// const table = $("<table class='table'></table>");
+const resultRow = $("<div class='row'></div>");
+
+
+
+const createTableResult = () => {
+
+
+    // will be ran each fetch 
+    // name obj.name
+    // current obj.price
+    // high obj.dayHigh
+    // low obj.dayLow
+}
+
+
+
+
 $("#submit").on('click', (e) => {
     e.preventDefault();
     const allSymbols = document.querySelectorAll(".pQuery");
