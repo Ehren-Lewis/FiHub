@@ -7,22 +7,25 @@ const apikey = "031790bc33587193255896a4a8034319"
 
 var highOfDay = document.querySelector('#high');
 var lowOfDay = document.querySelector('#low');
-var current = document.querySelector('#current');
-// var companyName = "";
-var requestedQuote = "ABC"
+var currentGlobal = document.querySelector('#current');
 
-$.ajax({
-    url: url + requestedQuote + "?apikey=" + apikey,
-    method: "GET"
-})
-.then(function (data) {
-    console.log(data)
-    companyName.text = "Company Name:  " + data[0].name;
-    high.textContent = "High of Day:  " + data[0].dayHigh;
-    low.textContent = "Low of Day:  " + data[0].dayLow;
-    current.textContent = "Current Price:  " + data[0].price;
+const table = document.querySelector("#infoDisplay");
 
-  });
+
+// var requestedQuote = "ABC"
+
+// $.ajax({
+//     url: url + requestedQuote + "?apikey=" + apikey,
+//     method: "GET"
+// })
+// .then(function (data) {
+//     console.log(data)
+//     companyName.text = "Company Name:  " + data[0].name;
+//     high.textContent = "High of Day:  " + data[0].dayHigh;
+//     low.textContent = "Low of Day:  " + data[0].dayLow;
+//     current.textContent = "Current Price:  " + data[0].price;
+
+//   });
 
 
 // high of day 
@@ -51,34 +54,51 @@ const key = "031790bc33587193255896a4a8034319";
 const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
 
-const createTableResult = () => {
+// const createTableResult = () => {
     
-}
+// }
 
 
 
 
-// $("#submit").on('click', (e) => {
-//     e.preventDefault();
-//     const allSymbols = document.querySelectorAll(".pQuery");
+$("#submit").on('click', (e) => {
+    e.preventDefault();
+    const allSymbols = document.querySelectorAll(".pQuery");
 
-//     for (let i = 0; i < allSymbols.length; i++) {
-//         symbolList.push(allSymbols[i].textContent.toUpperCase());
-//         $.ajax({
-//             url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
-//             method: "GET"
-//         }).then ( (value) => {
-//             console.log(value);
-//             requestedQuote.coName[i] = value[0].name;
-//             requestedQuote.high[i] = value[0].dayHigh;
-//             requestedQuote.low[i] = value[0].dayLow;
-//             requestedQuote.current[i] = value[0].price;
-//             console.log(requestedQuote[i].coName)
+    for (let i = 0; i < allSymbols.length; i++) {
+        symbolList.push(allSymbols[i].textContent.toUpperCase());
+        $.ajax({
+            url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
+            method: "GET"
+        }).then ( (value) => {
+            let name = value[0].name;
+            let high = value[0].dayHigh;
+            let low = value[0].dayLow;
+            let current = value[0].price;
 
-//         }).catch( (error) => {
-//             console.log(error);
-//         });
-//     }});
+            let template = `
+                    <tr>
+                        <td>${name}</td>
+                        <td>${high}</td>
+                        <td>${low}</td>
+                        <td>${current}</td>                
+                    </tr>`;
+            table.innerHTML += template;
+            
+                    // table.append(template)
+            
+            
+            console.log(value);
+            // requestedQuote.coName[i] = value[0].name;
+            // requestedQuote.high[i] = value[0].dayHigh;
+            // requestedQuote.low[i] = value[0].dayLow;
+            // requestedQuote.current[i] = value[0].price;
+            // console.log(requestedQuote[i].coName)
+
+        }).catch( (error) => {
+            console.log(error);
+        });
+    }});
 
 
 const queryHolder = $(".queryHolder");
