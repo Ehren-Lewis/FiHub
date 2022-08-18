@@ -8,13 +8,42 @@ var selectedCurr = document.getElementById("changedValue");
 document.getElementById("selectCoin").onchange = listQ;
 document.getElementById("selectCurr").onchange = listQ;
 
+var test1 = [];
+
 function listQ(e) {
-  console.log(e.target);
+  //console.log(e.target);
+  var coinValue = document.getElementById("coinValue");
+  var storedCoin = localStorage.getItem(storedCoin);
+  var storedCurr = localStorage.getItem(storedCurr);
+
   if (e.target.id == "selectCoin") {
     selectedCoin.textContent = this.value;
+    test1.fsym = this.value;
   } else {
     selectedCurr.textContent = this.value;
+    test1.tsyms = this.value;
+    var curr = this.value;
   }
+
+  const query = `${Object.keys(test1)[0]}=${test1.fsym}&${
+    Object.keys(test1)[1]
+  }=${test1.tsyms}&api_key=${key}`;
+
+  $.ajax({
+    url: baseUrl + query,
+    method: "GET",
+  })
+    .then((value) => {
+      console.log(test1.tsyms);
+      console.log(value.curr);
+      //coinValue.textContent = value.tsyms;
+      coinValue.textContent = value.curr;
+      console.log(test1);
+      console.log(baseUrl + query);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 // const label for autcoins = Coins:
@@ -39,6 +68,7 @@ $.ajax({
 })
   .then((value) => {
     console.log(value);
+    console.log(baseUrl + query);
   })
   .catch((error) => {
     console.log(error);
