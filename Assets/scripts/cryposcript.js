@@ -46,9 +46,9 @@ function listQ(e) {
     });
 }
 
-// const label for autcoins = Coins:
+// const label for autcoins = Coins: 
 
-// Input element
+// Input element 
 const autoCoins = $("#autoCoins");
 const key = "eb2ec9b0ef866612fd178ef226dea60481d77c7f2ebfd28b32372ce4fe6441c6";
 const baseUrl = "https://min-api.cryptocompare.com/data/price?";

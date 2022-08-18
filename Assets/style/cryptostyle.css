@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --tan: #dbcdc6;
+  --pink: #9d6381;
+  --purple: #615fd6;
+  --green: #559f84;
+  --blue: #0f638c;
+  --red: #800000;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--red);
+}
+
+.nav-bar img {
+  justify-self: flex-start;
+  align-self: center;
+  background-color: white;
+  width: 10%;
+  height: auto;
+  margin: 5px 0 5px 0;
+}
+
+.nav-bar h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  padding: 5px 0 15px 0;
+}
+
+.nav li {
+  align-self: center;
+  padding: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ABOUT SECTION */
+.about {
+  margin: 10px 25px 10px 25px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 10px 0 20px 0;
+  border-bottom: 4px solid var(--red);
+  margin: 0 0 20px 0;
+}
+
+.about p {
+  line-height: 1.4rem;
+}
+
+.p1 {
+  padding: 0 0 10px 0;
+}
+
+.p2 {
+  padding: 0 0 10px 0;
+}
+
+.about-div li {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 40px;
+  margin: 0 0 8px 0;
+}
+
+.about-div p {
+  padding: 0 0 8px 0;
+}
+
+.p3 {
+  padding: 2px 0 0 0;
+}
+
+/* CRYPTO TABLE SECTION */
+.table-section {
+  margin: 10px 25px 10px 25px;
+}
+
+.table {
+  border: 2px solid var(--blue);
+}
+
+.table thead {
+}
+
+.table tbody {
+}
+
+/* Splitting screen for currency comparison & news sections*/
+.split-page {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 25px 10px 25px;
+}
+
+/* CURRENCY COMPARISON SECTION */
+.compare-currency {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.compare-currency h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.compare-main-content {
+  background-color: var(--tan);
+  width: 100%;
+  padding: 0 10px 0 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.compare-description {
+  font-size: 1.2rem;
+  padding: 20px 0 30px 0;
+  text-align: center;
+  color: var(--red);
+}
+
+.form-select {
+  margin: 10px 0 20px 0;
+}
+.compare-result {
+  font-size: 1.2rem;
+  padding: 20px 0 30px 0;
+  border-top: 2px solid var(--red);
+}
+
+#changedCoin,
+#changedValue {
+  font-weight: bold;
+}
+
+/* NEWS SECTION */
+.news {
+  max-width: 50%;
+}
+
+.news h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.news-div {
+  background-color: var(--tan);
+  width: 100%;
+  padding: 0 10px 0 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.news p {
+  padding: 30px 0 30px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.news img {
+  max-width: 100%;
+  margin: 0 0 30px 0;
+  border-radius: 50px 50px 50px 50px;
+}
+
+/* FOOTER SECTION */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--red);
+}
+
+.footer img {
+  justify-self: flex-end;
+  align-self: center;
+  background-color: white;
+  width: 10%;
+  height: auto;
+  margin: 5px 0 5px 0;
+}

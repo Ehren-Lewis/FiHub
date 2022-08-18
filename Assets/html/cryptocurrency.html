@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../style/reset.css" />
     <link href="../style/cryptostyle.css" rel="stylesheet" />
     <!-- FontAwesome CDN -->
     <link
@@ -28,27 +29,70 @@
 
   <body>
     <!-- Nav Bar -->
-    <nav>
-      <div><!--put logo here--></div>
+    <nav class="nav-bar">
+      <img
+        id="nav-bar-logo"
+        src="../Images/FoHubLogoSoloTransparent.png"
+        alt="FiHub logo"
+      />
       <h1>Cryptocurrency</h1>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+      <ul class="nav">
+        <li>
+          <!-- Add link to landing page (index.html) -->
+          <a href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Stocks</a>
+        <li>
+          <a href="../html/stocks.html">Stocks</a>
         </li>
       </ul>
     </nav>
 
     <!-- About Crypto Section -->
-    <section>
+    <section class="about">
       <h2>About Cryptocurrency</h2>
-      <p></p>
+      <p class="p1">
+        Cryptocurrency, also known as crypto, is a type of currency that comes
+        exclusively in digital form. Unlike phyiscal currenies, there is no
+        central regulation or authority to maintain or uphold them. Crypto's
+        purpose is to be a medium of exchange through a computer network, as
+        they are not typically an accepted form of payment in most transactions.
+        Other's use this as an opportunity for investment.
+      </p>
+      <p class="p2">
+        Since the creation of crypto, there have been thousands of
+        cryptocurrencies created and will only continue to grow as popularity
+        increases. Currently, the most popular, and well known, crypto is
+        Bitcoin.
+      </p>
+      <div class="about-div">
+        <p>
+          Besides for investment opportunities, there are many reasons why
+          crypto is used. Some of the most popular reasons include:
+        </p>
+        <ul>
+          <li>
+            The digital form allows anyone from anywhere to send or recieve
+            payments with crypto.
+          </li>
+          <li>
+            Inflation is a thing of the past with crypto, as most have a limited
+            supply.
+          </li>
+          <li>
+            The cost for transactions is lower compared with physical
+            curriencies.
+          </li>
+        </ul>
+      </div>
+      <p class="p3">
+        Even though there are many benefits with crypto, it is not free of
+        risks. The main risk with crypto is the possibility of the value
+        decreasing, due unforseen changes in the market. However, this risk
+        exists with other types of investment opporunities too.
+      </p>
     </section>
-
     <!-- Table of crypto information -->
-    <section>
+    <section class="table-section">
       <h2>Cryptocurrency Information</h2>
       <table class="table" id="table">
         <thead>
@@ -64,66 +108,74 @@
         </tbody>
       </table>
     </section>
+    <div class="split-page">
+      <!-- Currency Comparison section -->
+      <section class="compare-currency">
+        <h3>Crypto Price Comparison</h3>
+        <div class="compare-main-content">
+          <p class="compare-description">
+            Compare cryptocurrency prices in various currencies.
+          </p>
+          <!-- Dropdown for crypto-->
+          <select class="form-select" id="selectCoin">
+            <option selected>Select Cryptocurrency Type</option>
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="YFI">Yearn.Finance</option>
+            <option value="BUSD">BUSD</option>
+            <option value="DOGE">Dogecoin</option>
+            <option value="SHIB">Shiba Inu</option>
+            <option value="SOL">Solana</option>
+            <option value="USDt">Tether</option>
+            <option value="BNB">Binance Coin</option>
+            <option value="XRP">XRP</option>
+          </select>
+          <!-- Dropdown for money currency -->
+          <select class="form-select" id="selectCurr">
+            <option selected>Select Currency Type</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <!-- Results of comparison -->
+          <p class="compare-result">
+            Coin selected: <span id="changedCoin"></span> Value in
+            <span id="changedValue"></span>
+          </p>
+        </div>
+      </section>
 
-    <!-- Currency Comparison section -->
-    <section class="compare-currency">
-      <!-- !!!!NOTE: decide if we want to specify a few options in html, or dynamically add an unlimited/larger amount in js based on API data-->
-
-      <h3>Compare crypto prices with other types of currency</h3>
-      <!-- Dropdown for crypto-->
-      <select class="form-select" id="selectCoin">
-        <option selected>Select Cryptocurrency Type</option>
-        <option value="BTC">Bitcoin</option>
-        <option value="ETH">Ethereum</option>
-        <option value="YFI">Yearn.Finance</option>
-        <option value="BUSD">BUSD</option>
-        <option value="DOGE">Dogecoin</option>
-        <option value="SHIB">Shiba Inu</option>
-        <option value="SOL">Solana</option>
-        <option value="USDt">Tether</option>
-        <option value="BNB">Binance Coin</option>
-        <option value="XRP">XRP</option>
-      </select>
-      <!-- Dropdown for money currency -->
-      <select class="form-select" id="selectCurr">
-        <option selected>Select Currency Type</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="JPY">JPY</option>
-        <option value="GBP">GBP</option>
-      </select>
-      <!-- Results of comparison -->
-      <p>Coin selected: <span id="changedCoin"></span></p>
-      <p>
-        It's currently worth <span id="coinValue"></span> in
-        <span id="changedValue"></span>
-      </p>
-    </section>
-
-    <!-- Currency news sections -->
-    <section>
-      <h3>Check out the latest news on crypto at</h3>
-      <a href="">
-        <!-- cryptonews logo & link to news-->
-        <img src="" alt=""
-      /></a>
-    </section>
-
+      <!-- Currency news sections -->
+      <section class="news">
+        <h3>Cryptocurrency News</h3>
+        <div class="news-div">
+          <p>Check out the latest news on crypto at cryptonews!</p>
+          <a href="https://cryptonews.com/">
+            <!-- cryptonews logo & link to news-->
+            <img src="../Images/crypto-news-logo.jpeg" alt="cryptonews logo"
+          /></a>
+        </div>
+      </section>
+    </div>
+ 
     <!-- Footer -->
-    <footer>
-      <ul class="nav justify-content-start">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+    <footer class="footer">
+      <ul class="nav-footer">
+        <li>
+          <a href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Stocks</a>
+        <li>
+          <a href="#">Stocks</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Crypto</a>
+        <li>
+          <a href="#">Crypto</a>
         </li>
       </ul>
-      <!-- Put logo here w/ link to home -->
-      <a href=""> <img src="" alt="" /> </a>
+      <!-- Add link to landing page -->
+      <a href="">
+        <img src="../Images/FoHubLogoSoloTransparent.png" alt="FiHub logo" />
+      </a>
     </footer>
 
     <!-- Script to pull in jQuery, Popper & Bootstrap. Last is the script file for the crypto index HTML -->
