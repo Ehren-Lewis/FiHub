@@ -68,7 +68,8 @@ Tools used:
 1. Visit the live site
 2. Copy the files from the developer tools into your own files
 
-<!-- Link to deployed -->
+- [Link](https://ehren-lewis.github.io/FiHub/) to deployed application.
+- [Link](https://github.com/Ehren-Lewis/FiHub) to GitHub repository.
 
 ## Usage
 
