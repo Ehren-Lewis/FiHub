@@ -117,24 +117,24 @@ $(() => {
 
 const base = "https://min-api.cryptocompare.com/data/all/coinlist";
 
-
-
 const topFiveCoins = () => {
   $.ajax({
     url: `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=5&tsym=USD&api_key=${key}`,
-    method: "GET"
-  }).then( (value) => {
-    for ( let i of value.Data ) {
+    method: "GET",
+  }).then((value) => {
+    for (let i of value.Data) {
       const row = $("<tr></tr>");
-      row.append(`<td>${value.Data.indexOf(i) + 1}.</td>`)
+      var rank = $(`<td>${value.Data.indexOf(i) + 1}.</td>`);
+      row.append(rank);
+      rank.css({ "background-color": "rgb(128, 0, 0, .7)", "color": "white" });
       row.append(`<td>${i.CoinInfo.FullName}</td>`);
       row.append(`<td>${i.DISPLAY.USD.PRICE}</td>`);
       row.append(`<td>${i.DISPLAY.USD.HIGHDAY}</td>`);
       row.append(`<td>${i.DISPLAY.USD.LOWDAY}</td>`);
       row.append(`<td>${i.DISPLAY.USD.CHANGEPCTDAY}%</td>`);
       $("#coinTable").append(row);
-      }
+    }
   });
-}
+};
 
 topFiveCoins();
