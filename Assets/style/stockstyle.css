@@ -138,7 +138,35 @@ font-size: 16px;
   .form-select {
     margin: 10px 0 20px 0;
   }
+  /* STOCK TABLE SECTION */
+.table-section {
+    border-top: 2px solid var(--palegr);
+    margin: 10px 25px 0 25px;
+    padding-bottom: 50px;
+  }
   
+  .table-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--green);
+    padding: 50px 0 20px 0;
+    border-bottom: 4px solid var(--darkgr);
+    margin: 0 0 30px 0;
+  }
+  
+  .table {
+    border: 2px solid var(--red);
+    width: 100%;
+  }
+  
+  .table thead {
+    background-color: var(--red);
+    color: white;
+  }
+  
+  .table tbody {
+    background-color: var(--palegr);
+  }
 
 
 
