@@ -41,13 +41,13 @@ let querySymbol = "";
 const addMoreButton = $("#addMore");
 
 
-const addAnotherRow = () => {
-    const label = $("<label for='symbolInput'>Symbol: <label>");
-    const submitArea = $('<input type="text" id="symbolInput">');
-        addMoreButton.before(label);
-        addMoreButton.before(submitArea);
-        addMoreButton.before("<br>");
-}
+// const addAnotherRow = () => {
+//     const label = $("<label for='symbolInput'>Symbol: <label>");
+//     const submitArea = $('<input type="text" id="symbolInput">');
+//         addMoreButton.before(label);
+//         addMoreButton.before(submitArea);
+//         addMoreButton.before("<br>");
+// }
 
 const key = "031790bc33587193255896a4a8034319";
 
@@ -61,59 +61,59 @@ const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
 
 
-$("#submit").on('click', (e) => {
-    e.preventDefault();
-    const allSymbols = document.querySelectorAll(".pQuery");
+// $("#submit").on('click', (e) => {
+//     e.preventDefault();
+//     const allSymbols = document.querySelectorAll(".pQuery");
 
-    for (let i = 0; i < allSymbols.length; i++) {
+//     for (let i = 0; i < allSymbols.length; i++) {
         
-        $.ajax({
-            url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
-            method: "GET"
-        }).then ( (value) => {
-            let name = value[0].name;
-            let high = value[0].dayHigh;
-            let low = value[0].dayLow;
-            let current = value[0].price;
+//         $.ajax({
+//             url : `${beforeUrl}${allSymbols[i].textContent.toUpperCase()}?apikey=${key}`,
+//             method: "GET"
+//         }).then ( (value) => {
+//             let name = value[0].name;
+//             let high = value[0].dayHigh;
+//             let low = value[0].dayLow;
+//             let current = value[0].price;
 
-            let template = `
-                    <tr>
-                        <td>${upper}</td>
-                        <td>${name}</td>
-                        <td>${high}</td>
-                        <td>${low}</td>
-                        <td>${current}</td>                
-                    </tr>`;
-            table.innerHTML += template;
+//             let template = `
+//                     <tr>
+//                         <td>${upper}</td>
+//                         <td>${name}</td>
+//                         <td>${high}</td>
+//                         <td>${low}</td>
+//                         <td>${current}</td>                
+//                     </tr>`;
+//             table.innerHTML += template;
             
-                    // table.append(template)
+//                     // table.append(template)
             
             
-            console.log(value);
-            // requestedQuote.coName[i] = value[0].name;
-            // requestedQuote.high[i] = value[0].dayHigh;
-            // requestedQuote.low[i] = value[0].dayLow;
-            // requestedQuote.current[i] = value[0].price;
-            // console.log(requestedQuote[i].coName)
+//             console.log(value);
+//             // requestedQuote.coName[i] = value[0].name;
+//             // requestedQuote.high[i] = value[0].dayHigh;
+//             // requestedQuote.low[i] = value[0].dayLow;
+//             // requestedQuote.current[i] = value[0].price;
+//             // console.log(requestedQuote[i].coName)
 
-        }).catch( (error) => {
-            console.log(error);
-        });
-    }});
+//         }).catch( (error) => {
+//             console.log(error);
+//         });
+//     }});
 
 
-const queryHolder = $(".queryHolder");
+// const queryHolder = $(".queryHolder");
 
-const pushQuery = (value) => {
-    if (!value) {
-        return;
-    }
-    const newVal = $("<p></p>");
-    newVal.text(value);
-    newVal.addClass("pQuery col-2");
-    queryHolder.append(newVal);
-    console.log(newVal.value);
-}
+// const pushQuery = (value) => {
+//     if (!value) {
+//         return;
+//     }
+//     const newVal = $("<p></p>");
+//     newVal.text(value);
+//     newVal.addClass("pQuery col-2");
+//     queryHolder.append(newVal);
+//     console.log(newVal.value);
+// }
 
 
 $("#addMore").on('click', (e) => {
@@ -121,15 +121,24 @@ $("#addMore").on('click', (e) => {
     const allSymbols = document.querySelector("#symbolInput");
     console.log(allSymbols.value);
     upper = allSymbols.value.toUpperCase();
-    newTable();
+    allSymbols.value = '';
+    console.log(upper);
+    
+    
+    
+    newTable(upper);
 });
 
-function newTable() {
-
+function newTable(upper) {
+    
     $.ajax({
         url : `${beforeUrl}${upper}?apikey=${key}`,
         method: "GET"
     }).then ( (value) => {
+        if (!value.length) {
+            alert("danger will robinson");
+        }
+    else { 
         let name = value[0].name;
         let high = value[0].dayHigh;
         let low = value[0].dayLow;
@@ -144,5 +153,6 @@ function newTable() {
                     <td>${current}</td>                
                 </tr>`;
         table.innerHTML += template;
-      
+    }      
 })}
+
