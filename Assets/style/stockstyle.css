@@ -10,10 +10,10 @@ font-size: 16px;
     --green: #559f84;
     --blue: #0f638c;
     --red: #800000;
-    --palegr:#ccffe7;
+    --palegr:#ddfff3;
     --darkgr:#2A4F42;
 
-    
+
   }
   /*Body Styles*/
   .nav-bar {
@@ -66,9 +66,9 @@ font-size: 16px;
     padding: 10px;
   }
   
-  infoDisplay {
-      display:flex;
-      padding: 10px 50px 30px 0;;
+  /* #infoDisplay {
+    display:flex;
+    padding: 10px 50px 30px 0;; */
   }
   
   footer {
@@ -82,9 +82,9 @@ font-size: 16px;
   
 .pQuery {
     /* display: inline-block; */
-    border: 1px solid black;
+    border: 0px solid black;
     padding-right: 2px;
-
+    border-radius: 20px 20px 20px 20px;
 
 }
 
@@ -98,6 +98,7 @@ font-size: 16px;
     margin-bottom: 2px;
     min-height: 5px;
     padding-inline-start: 15px;
+    
 }  
 
 .stock-selector {
@@ -111,7 +112,7 @@ font-size: 16px;
     font-size: 1.5rem;
     font-weight: bold;
     background-color: var(--darkgr);
-    color: white;
+    color: var(--palegr);
     text-align: center;
     width: 100%;
     height: 20%;
@@ -119,6 +120,8 @@ font-size: 16px;
     border-radius: 20px 20px 0 0;
   }
   
+ 
+
   .selector-inputbox{
     background-color: var(--palegr);
     width: 100%;
@@ -130,18 +133,67 @@ font-size: 16px;
   
   .selector-instruction {
     font-size: 1.2rem;
+    font-family: Arial, sans-serif;
     padding: 20px 0 30px 0;
     text-align: center;
-    color: var(--red);
+    color: var(--darkgr)
   }
   
-  .form-select {
+  .form-group {
     margin: 10px 0 20px 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+     color: var(--darkgr)
+  }
+button {
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: var(--darkgr);
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 30px;
+
+}
+
+  /* STOCK TABLE SECTION */
+.table-section {
+    border-top: 2px solid var(--palegr);
+    margin: 10px 25px 0 25px;
+    padding-bottom: 50px;
   }
   
+  .table-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--darkgr);
+    padding: 50px 0 20px 0;
+    border-bottom: 1px solid var(--darkgr);
+    margin: 0 0 30px 0;
+  }
+  
+  .table {
+    border: 2px solid var(--palegr);
+    width: 100%;
+  }
+  
+  .table thead {
+    background-color: var(--darkgr);
+    color: var(--palegr);
+    font-weight: 700;
+  }
+  
+  .table tbody {
+    background-color: var(--palegr);
+    font-family: Arial, sans-serif;
+    color: var(--darkgr);
+    border: 1px solid var(var(--green));
+
+  }
+#stockTable tbody {
+  border: 1px solid var(var(--green));
 
 
-
+}
 
 
 
