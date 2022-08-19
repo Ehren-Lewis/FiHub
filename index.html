@@ -1,90 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="./Assets/style/indexstyle.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- personal CSS files for both the home and crypto pages -->
+    <link href="./Assets/style/indexstyle.css" rel="stylesheet" />
+    <link href="./Assets/style/cryptostyle.css" rel="stylesheet" />
+
     <title>FiHub Home</title>
-</head>
-
-<body>
-    
+  </head>
+  <body>
+    <!-- start of header and nav bar -->
     <header>
-
-        <nav class="navbar navbar-expand fixed-top navbar-dark shadow navcolor">
-    
-            <div class="navbar-nav nav w-100 d-flex justify-content-around navcolor">
-                <a class="nav-item nav-link active" href="#">Home</a>
-                <a class="nav-item nav-link" href="./Assets/html/stocks.html">Stocks</a>
-                <a class="nav-item nav-link" href="./Assets/html/cryptocurrency.html">Crypto</a>
-            </div>
-        </nav>
+      <nav class="nav-bar">
+        <img
+          id="nav-bar-logo"
+          src="./Assets/Images/FiHubWhiteLarge.png"
+          alt="FiHub logo"
+        />
+        <h1>Home</h1>
+        <ul class="nav navbar-ul">
+          <li>
+            <a href="./Assets/html/stocks.html">Stocks</a>
+          </li>
+          <li>
+            <a href="./Assets/html/cryptocurrency.html">Crypto</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-
-    <div class="container" style="margin-top: 200px;">
-        <div class="row">
-            <div class="col border" style="height: 200px"></div>
+    <!-- Start of page body -->
+    <div class="container" style="margin-top: 150px">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-sm-12 d-flex" style="height: 200px">
+          <img
+            class="pe-4"
+            src="./Assets/Images/FiHubLogoWords.png"
+            alt="FiHub Logo"
+          />
         </div>
-
-        <div class="row">
-            <div class="col"></div>
+        <div class="col-lg-7 col-sm-12 d-flex align-items-center py-2">
+          <p class="ps-4">
+            &emsp;&emsp;FiHub is the next generation finance aggregator with the
+            goal to be satisfying any and all finance needs. Using some of the
+            best Apis around today, FiHub will process all of your needed calls
+            for information, whether it is the price of a current
+            Cryptocurrency, the latest stock, exchange rate between currencies,
+            or regularly updated finance and bcryptocurrency news, FiHub is the
+            website for you!
+          </p>
         </div>
-
-        <div class="row border my-5">
-            <div class="col-6">
-                <h2 class="border text-center border-right">What Are Stocks?</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nisi a iusto quibusdam natus possimus, architecto non rerum voluptatem temporibus, sapiente suscipit magni. Aspernatur, voluptates vel alias ipsam iure reprehenderit atque commodi facilis harum, corporis praesentium neque facere. Veniam incidunt enim maiores libero. Qui, nesciunt.</p>
+      </div>
+      <!-- What are stocks and crypto section -->
+      <div class="row my-5 py-3">
+        <div class="col-lg-6 col-sm-12 text-center">
+          <h2 class="text-center">What Are Stocks?</h2>
+          <p class="">
+            Stocks represent partial ownership of businesses. By owning stocks,
+            also called shares, in a particular company, an individual is
+            entitled to a portion of that company's profit and assets. FiHub
+            helps the everyday investor stay informed about their favorite
+            public companies.
+          </p>
+        </div>
+        <div class="col-lg-6 col-sm-12 text-center">
+          <h2 class="text-center">What Is Cryptocurrency?</h2>
+          <p>
+            It's a digital currency that we can't physically touch, but can
+            spend just as we spend physical dollars. Many around the world think
+            the future of currency is cryptocurrency. FiHub is the one stop show
+            for the cryptocurrency fans to pull the latest data on their top
+            coins.
+          </p>
+        </div>
+      </div>
+      <!-- Buttons to both pages, stocks and crypto -->
+      <div class="row" style="margin-bottom: 200px">
+        <div class="col">
+          <h5 class="text-center pb-5">Figure out which works best for you</h5>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 text-center p-2">
+              <a
+                href="./Assets/html/stocks.html"
+                type="button"
+                class="btn btn-secondary btn-lg py-3 px-4"
+              >
+                Click for Stocks
+              </a>
             </div>
-            <div class="col-6 text-center">
-               <h2 class="border">What Is Cryptocurrency?</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aspernatur accusamus corrupti sequi laborum iusto voluptatibus ad assumenda quod ducimus! Earum omnis rem autem natus nemo, facere mollitia fuga dolorem at id voluptas vel vitae soluta nostrum nobis ducimus saepe obcaecati non modi, sequi nam?</p>
+            <div class="col-lg-6 col-sm-12 text-center">
+              <a
+                href="./Assets/html/cryptocurrency.html"
+                type="button"
+                class="btn btn-secondary btn-lg py-3 px-4"
+              >
+                Click for Crytpocurrencies
+              </a>
             </div>
+          </div>
         </div>
-
-        <div class="row border" style="margin-bottom: 200px">
-            <div class="col">
-                <p class="text-center">Figure out which <span>stocks</span> or <span>Crytpo</span> work for you</p>
-            </div>
-        </div>
-        
+      </div>
     </div>
-
-    <footer>
-
-        <nav class="navbar navbar-expand sticky-bottom navbar-dark shadow navcolor">
-    
-            <div class="navbar-nav nav w-100 d-flex justify-content-around navcolor">
-                <a class="nav-item nav-link" href="#"><i class="fa fa-brands fa-github fs-2"></i></a>
-                <a class="nav-item nav-link" href="#"><i class="fa fa-brands fa-github fs-2"></i></a>
-                <a class="nav-item nav-link" href="#"><i class="fa fa-brands fa-github fs-2"></i></a>
-                <a class="nav-item nav-link" href="#"><i class="fa fa-brands fa-github fs-2"></i></a>
-                <a class="nav-item nav-link" href="#"><i class="fa fa-brands fa-github fs-2"></i></a>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand sticky-bottom navbar-dark shadow navcolor">
-    
-            <div class="navbar-nav nav w-100 d-flex justify-content-around navcolor">
-                <a class="nav-item nav-link" href="#">Ehren Lewis</a>
-                <a class="nav-item nav-link" href="#">Spencer Gran</a>
-                <a class="nav-item nav-link" href="#">Hannah Alverson</a>
-                <a class="nav-item nav-link" href="#">Andre Radatus</a>
-                <a class="nav-item nav-link" href="#">John O'Brien</a>
-            </div>
-        </nav>
+    <!-- start of the footer -->
+    <footer class="footer">
+      <ul class="nav footer-nav">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./Assets/html/stocks.html">Stocks</a>
+        </li>
+        <li>
+          <a href="./Assets/html/cryptocurrency.html">Crypto</a>
+        </li>
+      </ul>
+      <a class="footer-img-link" href="../../index.html">
+        <img
+          class="footer-img"
+          src="./Assets/Images/FiHubWhiteLarge.png"
+          alt="FiHub logo"
+        />
+      </a>
     </footer>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./Assets/scripts/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-
+    <!-- Script links to jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Script links Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script links to Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script personal JS -->
+    <script src="./Assets/scripts/index.js"></script>
+  </body>
 </html>
