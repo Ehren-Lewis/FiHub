@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -9,7 +10,7 @@
   --purple: #615fd6;
   --green: #559f84;
   --blue: #0f638c;
-  --red: #800000;
+  --red: rgb(128, 0, 0);
 }
 
 /* NAVBAR */
@@ -90,7 +91,7 @@
 }
 
 .p3 {
-  padding: 2px 0 0 0;
+  padding: 5px 0 0 0;
 }
 
 /* CRYPTO TABLE SECTION */
@@ -121,6 +122,10 @@
 
 .table tbody {
   background-color: var(--tan);
+}
+
+.table tr:hover {
+  background-color: rgb(15, 99, 140, 0.2);
 }
 
 /* Splitting screen for currency comparison & news sections*/
@@ -171,17 +176,24 @@
 
 .form-select {
   margin: 10px 0 20px 0;
+  color: black;
 }
 
 .form-select:hover {
   cursor: pointer;
-  opacity: 60%;
+  background-color: rgb(15, 99, 140, 0.3);
+  color: white;
 }
 
 .compare-result {
   font-size: 1.2rem;
   padding: 20px 0 30px 0;
   border-top: 2px solid var(--red);
+}
+
+.value {
+  font-style: italic;
+  font-weight: bold;
 }
 
 #changedCoin,
