@@ -40,10 +40,6 @@ function listQ(e) {
     method: "GET",
   })
     .then((value) => {
-      // console.log(baseUrl);
-      // console.log(query);
-      // console.log(value);
-      //console.log(value[cryptoParams.tsyms]);
       coinValue.textContent = value[cryptoParams.tsyms];
       console.log(value[cryptoParams.tsyms]);
     })
@@ -83,37 +79,6 @@ $.ajax({
     console.log(error);
   });
 
-const apiCoinKeys = [
-  "BTC",
-  "ETH",
-  "YFI",
-  "BUSD",
-  "DOGE",
-  "SHIB",
-  "SOL",
-  "USDT",
-  "BNB",
-  "XRP",
-];
-
-$(() => {
-  var availableTags = [
-    "Bitcoin",
-    "Ethereum",
-    "Yearn.Finance",
-    "BUSD",
-    "Dogecoin",
-    "Shiba Inu",
-    "Solana",
-    "Tether",
-    "Binance Coin",
-    "XRP",
-  ];
-
-  $("#autoCoins").autocomplete({
-    source: availableTags,
-  });
-});
 
 const topFiveCoins = () => {
   $.ajax({
