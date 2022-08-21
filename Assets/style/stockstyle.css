@@ -68,7 +68,7 @@ font-size: 16px;
   /* #infoDisplay {
     display:flex;
     padding: 10px 50px 30px 0;; */
-  }
+  /* } */
   
   footer {
     flex-shrink: 0;
@@ -76,7 +76,7 @@ font-size: 16px;
     text-align: center;
     background: var(--red);
     color: var(--pink);
-    margin-top: auto;
+    margin-top: 150px;
   }
   
 .pQuery {
@@ -155,6 +155,7 @@ button {
 .table-section {
     margin: 10px 25px 0 25px;
     padding-bottom: 50px;
+    border-top: none;
   }
   
   .table-section h2 {
@@ -184,14 +185,12 @@ button {
     border: 1px solid var(var(--green));
 
   }
+  
 #stockTable tbody {
   border: 1px solid var(var(--green));
 
 
 }
-
-
-
 
 
  
@@ -266,4 +265,12 @@ button {
       text-align: center;
     }
   }
+
+  .p1 {
+    padding: 0 0 10px 0;
+  }
+
   
+  .about {
+    border-bottom: 2px solid var(--tan);
+  }
