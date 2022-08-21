@@ -11,7 +11,7 @@ var currSymbol = document.getElementById("currSymbol");
 document.getElementById("selectCoin").onchange = listQ;
 document.getElementById("selectCurr").onchange = listQ;
 
-var test1 = {};
+var cryptoParams = {};
 var currSymbols = {
   USD: "$",
   EUR: "€",
@@ -25,15 +25,15 @@ function listQ(e) {
 
   if (e.target.id == "selectCoin") {
     selectedCoin.textContent = this.value;
-    test1.fsym = this.value;
+    cryptoParams.fsym = this.value;
   } else {
     selectedCurr.textContent = this.value;
-    test1.tsyms = this.value;
+    cryptoParams.tsyms = this.value;
   }
 
-  const query = `${Object.keys(test1)[0]}=${test1.fsym}&${
-    Object.keys(test1)[1]
-  }=${test1.tsyms}&api_key=${key}`;
+  const query = `${Object.keys(cryptoParams)[0]}=${cryptoParams.fsym}&${
+    Object.keys(cryptoParams)[1]
+  }=${cryptoParams.tsyms}&api_key=${key}`;
 
   $.ajax({
     url: baseUrl + query,
@@ -43,15 +43,15 @@ function listQ(e) {
       // console.log(baseUrl);
       // console.log(query);
       // console.log(value);
-      //console.log(value[test1.tsyms]);
-      coinValue.textContent = value[test1.tsyms];
-      console.log(value[test1.tsyms]);
+      //console.log(value[cryptoParams.tsyms]);
+      coinValue.textContent = value[cryptoParams.tsyms];
+      console.log(value[cryptoParams.tsyms]);
     })
     .catch((error) => {
       console.log(error);
     });
 
-  currSymbol.textContent = currSymbols[test1.tsyms];
+  currSymbol.textContent = currSymbols[cryptoParams.tsyms];
   // coinValue.textContent = "just any number";
 }
 
@@ -114,8 +114,6 @@ $(() => {
     source: availableTags,
   });
 });
-
-const base = "https://min-api.cryptocompare.com/data/all/coinlist";
 
 const topFiveCoins = () => {
   $.ajax({
