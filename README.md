@@ -84,8 +84,8 @@ The content provided for both stocks and cryptocurrency includes some of the fol
 - Day change percentage
 - Regularly updated finance and cryptocurrency news
 
-![Screenshot of home page]()
-![Screenshot of crypto page]()
+![Screenshot of home page](./Assets/Images/fiHubLanding.png)
+![Screenshot of crypto page](./Assets/Images/fiHubCrypto.png)
 ![Screenshot of stocks page]()
 
 ## Credits

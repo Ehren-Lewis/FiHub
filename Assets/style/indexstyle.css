@@ -42,3 +42,11 @@
   .grid-start {
     grid-template-columns: repeat(1fr, 5);
   }
+
+  .footer-space {
+    margin-bottom: 150px;
+  }
+
+  .header-space {
+    margin-top: 50px;
+  }
