@@ -19,9 +19,17 @@ var currSymbols = {
   GBP: "£",
 };
 
+const key = "eb2ec9b0ef866612fd178ef226dea60481d77c7f2ebfd28b32372ce4fe6441c6";
+const recentCoinPull = JSON.parse(localStorage.getItem("recentCoin"));
+selectedCoin.textContent = recentCoinPull[0];
+selectedCurr.textContent = recentCoinPull[1];
+coinValue.textContent = recentCoinPull[2];
+
+$(".recentPull").text("Most recent pull: ");
+$(".recentPull").css("margin-bottom", "5px");
+
+
 function listQ(e) {
-  var storedCoin = localStorage.getItem(storedCoin);
-  var storedCurr = localStorage.getItem(storedCurr);
 
   if (e.target.id == "selectCoin") {
     selectedCoin.textContent = this.value;
@@ -31,54 +39,21 @@ function listQ(e) {
     cryptoParams.tsyms = this.value;
   }
 
-  const query = `${Object.keys(cryptoParams)[0]}=${cryptoParams.fsym}&${
-    Object.keys(cryptoParams)[1]
-  }=${cryptoParams.tsyms}&api_key=${key}`;
-
+  if (selectedCoin.textContent && selectedCurr.textContent) {
+    $(".recentPull").text("Current Pull: ");
   $.ajax({
-    url: baseUrl + query,
+    // url: baseUrl + query,
+    url:`https://min-api.cryptocompare.com/data/price?fsym=${selectedCoin.textContent}&tsyms=${selectedCurr.textContent}&api_key=${key}`,
     method: "GET",
   })
     .then((value) => {
-      coinValue.textContent = value[cryptoParams.tsyms];
-      console.log(value[cryptoParams.tsyms]);
+      coinValue.textContent = `${currSymbols[cryptoParams.tsyms]}${value[cryptoParams.tsyms]}`;
+      localStorage.setItem("recentCoin", JSON.stringify([selectedCoin.textContent, selectedCurr.textContent, coinValue.textContent]));
     })
     .catch((error) => {
       console.log(error);
     });
-
-  currSymbol.textContent = currSymbols[cryptoParams.tsyms];
-  // coinValue.textContent = "just any number";
-}
-
-// const label for autcoins = Coins:
-
-// Input element
-const autoCoins = $("#autoCoins");
-const key = "eb2ec9b0ef866612fd178ef226dea60481d77c7f2ebfd28b32372ce4fe6441c6";
-const baseUrl = "https://min-api.cryptocompare.com/data/price?";
-
-let tests = {
-  fsym: "BTC",
-  tsyms: "USD",
-};
-
-const query = `${Object.keys(tests)[0]}=${tests.fsym}&${
-  Object.keys(tests)[1]
-}=${tests.tsyms}&api_key=${key}`;
-
-$.ajax({
-  url: baseUrl + query,
-  method: "GET",
-})
-  .then((value) => {
-    console.log(value);
-    console.log(baseUrl + query);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
+}}
 
 const topFiveCoins = () => {
   $.ajax({
