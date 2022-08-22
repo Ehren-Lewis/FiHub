@@ -29,6 +29,7 @@ $(".recentPull").text("Most recent pull: ");
 $(".recentPull").css("margin-bottom", "5px");
 
 
+// Binding the function to get the inputs 
 function listQ(e) {
 
   if (e.target.id == "selectCoin") {
@@ -41,6 +42,7 @@ function listQ(e) {
 
   if (selectedCoin.textContent && selectedCurr.textContent) {
     $(".recentPull").text("Current Pull: ");
+    // Ajax call based on their choices 
   $.ajax({
     // url: baseUrl + query,
     url:`https://min-api.cryptocompare.com/data/price?fsym=${selectedCoin.textContent}&tsyms=${selectedCurr.textContent}&api_key=${key}`,
@@ -55,6 +57,8 @@ function listQ(e) {
     });
 }}
 
+
+// Ajax call for the top 5 coins 
 const topFiveCoins = () => {
   $.ajax({
     url: `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=5&tsym=USD&api_key=${key}`,

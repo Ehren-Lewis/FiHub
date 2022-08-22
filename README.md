@@ -86,7 +86,7 @@ The content provided for both stocks and cryptocurrency includes some of the fol
 
 ![Screenshot of home page](./Assets/Images/fiHubLanding.png)
 ![Screenshot of crypto page](./Assets/Images/fiHubCrypto.png)
-![Screenshot of stocks page]()
+![Screenshot of stocks page](./Assets/Images/fiHubStocks.png)
 
 ## Credits
 
