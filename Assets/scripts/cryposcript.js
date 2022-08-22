@@ -21,10 +21,12 @@ var currSymbols = {
 
 const key = "eb2ec9b0ef866612fd178ef226dea60481d77c7f2ebfd28b32372ce4fe6441c6";
 const recentCoinPull = JSON.parse(localStorage.getItem("recentCoin"));
+if (recentCoinPull) {
 selectedCoin.textContent = recentCoinPull[0];
 selectedCurr.textContent = recentCoinPull[1];
 coinValue.textContent = recentCoinPull[2];
 
+}
 $(".recentPull").text("Most recent pull: ");
 $(".recentPull").css("margin-bottom", "5px");
 
