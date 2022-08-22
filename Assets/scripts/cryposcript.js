@@ -42,6 +42,7 @@ function listQ(e) {
     cryptoParams.tsyms = this.value;
   }
 
+
   if (selectedCoin.textContent && selectedCurr.textContent) {
     $(".recentPull").text("Current Pull: ");
     // Ajax call based on their choices 
@@ -50,7 +51,7 @@ function listQ(e) {
     url:`https://min-api.cryptocompare.com/data/price?fsym=${selectedCoin.textContent}&tsyms=${selectedCurr.textContent}&api_key=${key}`,
     method: "GET",
   })
-    .then((value) => {
+    .then((value) => { 
       coinValue.textContent = `${currSymbols[cryptoParams.tsyms]}${value[cryptoParams.tsyms]}`;
       localStorage.setItem("recentCoin", JSON.stringify([selectedCoin.textContent, selectedCurr.textContent, coinValue.textContent]));
     })
