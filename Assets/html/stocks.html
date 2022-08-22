@@ -88,7 +88,8 @@
         
         </div>
       </section>
-    </main> 
+
+</main> 
 
  <!-- Table of stocks information -->
  <section class="table-section">
@@ -117,17 +118,19 @@
     <div id="current"></div>
 
     
-    <div class="modal fade " id="cryptoModal" aria-hidden="true" role="dialog" tabindex="-1">
-      <div class="moda-dialog" role="document">
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">An error has occured</h5>
+            <h5 class="modal-title">Couldn't find the stock</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>There was an error trying to access the cryptocurrency, please try again</p>
+            <p>FiHub could not find the desired stock, please try again</p>
           </div>
           <div class="modal-footer">
-          <button type="button" class="btn btn-success close" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>

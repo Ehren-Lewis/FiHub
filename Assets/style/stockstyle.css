@@ -102,7 +102,6 @@ font-size: 16px;
 .stock-selector {
     display: flex;
     flex-wrap: wrap;
-    width: 48%;
     margin-right: 10px;
   }
   
@@ -274,3 +273,4 @@ button {
   .about {
     border-bottom: 2px solid var(--tan);
   }
+

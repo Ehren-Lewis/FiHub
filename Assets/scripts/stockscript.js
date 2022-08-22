@@ -1,6 +1,5 @@
 
 
-
 var upper;
 const table = document.querySelector("#infoDisplay");
 
@@ -14,7 +13,7 @@ const beforeUrl = "https://financialmodelingprep.com/api/v3/quote/";
 
 const queryHolder = $(".queryHolder");
 
-
+// Binding the function to the button 
 $("#addMore").on('click', (e) => {
     e.preventDefault();
     const allSymbols = document.querySelector("#symbolInput");
@@ -24,6 +23,7 @@ $("#addMore").on('click', (e) => {
 
 let currentlyDisplayed = [] 
 
+// Ajax call based on the inputted inputted value
 function newTable() {
 $("#symbolInput").val("");
     $.ajax({
@@ -54,4 +54,9 @@ $("#symbolInput").val("");
                 </tr>`;
         table.innerHTML += template;
       
-})}
+}).catch( (error) => {
+    $(".modal").modal("show");
+})
+}
+
+$(".close").on('click', () => {$(".modal").modal("hide")});
